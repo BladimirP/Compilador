@@ -17,10 +17,11 @@ int count_sim = 0;
 end                                         {return 0;}
 %%
 
-int yywrap(){}
+int yywrap(){
+}
 
 int main(){
-    printf("Ingrese: \n");
+    printf("Ingrese  entrada ( Para finalizar ingrese: end ): \n");
     // Llama al analisador lexico
     yylex();
     printf("N° PALABRAS RESERVADAS: %i\nN° NOMBRES: %i\nN° DIRECCIONES: %i\n N° SIMBOLOS: %i", count_PR, count_nom, count_dir, count_sim);
